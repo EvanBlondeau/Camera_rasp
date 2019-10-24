@@ -1,0 +1,9 @@
+
+#!/bin/bash
+
+raspivid -n -w 720 -h 408 -fps 25 -vf -hf -t 0 -b 17000000 -ih -o - \
+| ffmpeg -y \
+    -i - \
+    -c:v copy \
+    -map 0:0 \
+    -hls_wrap 5 -hls_time 1 -hls_flags delete_segments -hls_list_size 1 -f hls output.m3u8 &
