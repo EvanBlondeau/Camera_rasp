@@ -13,7 +13,7 @@
     "hls-server": "^1.5.0",
     "http-attach": "^1.0.0",
     "ip": "^1.1.5",
-    "socket.io": "^2.2.0",
+    "socket.io": "^2.5.0",
     "socket.io-client": "^2.2.0"
   }
 }
